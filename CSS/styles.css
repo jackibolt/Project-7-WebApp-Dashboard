@@ -368,11 +368,6 @@ template {
   text-transform: uppercase;
 }
 
-.main-grid > div {
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
 header {
   grid-area: header;
 }
@@ -480,6 +475,11 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.traffic-wrap {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .notif {

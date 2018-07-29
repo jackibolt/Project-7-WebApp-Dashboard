@@ -9,3 +9,8 @@
 .chart-options {
   @include flex($dir: row, $just: space-between);
 }
+
+.traffic-wrap {
+  padding-left: 25px;
+  padding-right: 25px;
+}
