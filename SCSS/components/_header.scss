@@ -1,0 +1,23 @@
+
+// HEADER STYLES
+
+header {
+  background-color: $primary-light;
+  height: 70px;
+  color: $white;
+}
+
+.header-content {
+  width: 95%;
+  padding-top: 25px;
+  margin: auto;
+  @include flex($just: space-between);
+}
+
+.right-info {
+  @include flex($just: space-around);
+}
+
+.profile {
+display: flex;
+}

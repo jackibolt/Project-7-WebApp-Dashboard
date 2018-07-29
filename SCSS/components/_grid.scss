@@ -1,0 +1,100 @@
+
+// GRID LAYOUT
+
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  grid-template-rows: 70px auto;
+  grid-template-areas:
+      'header header'
+      'nav main';
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 70px auto auto auto auto auto;
+  grid-template-areas:
+      'subhead subhead'
+      'traffic traffic'
+      'daily mobile'
+      'social social'
+      'members recent'
+      'message settings';
+}
+
+
+// Section Styles
+.section-title {
+  font-size: $large-font;
+  text-transform: uppercase;
+}
+
+.main-grid > div {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+
+  // grid section names
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.main-grid {
+  grid-area: main;
+}
+
+.subheader {
+  grid-area: subhead;
+}
+
+.traffic-wrap {
+  grid-area: traffic;
+  @extend %section-padding;
+  border-bottom: $div-border;
+}
+
+.daily-wrap {
+  grid-area: daily;
+  @extend %section-padding;
+}
+
+.mobile-wrap {
+  grid-area: mobile;
+  @extend %section-padding;
+}
+
+.social-wrap {
+  grid-area: social;
+  @extend %section-padding;
+  border-top: $div-border;
+  border-bottom: $div-border;
+}
+
+.members-wrap {
+  grid-area: members;
+  @extend %section-padding;
+  border-bottom: $div-border;
+}
+
+.recent-wrap {
+  grid-area: recent;
+  @extend %section-padding;
+  border-bottom: $div-border;
+  border-left: $div-border;
+}
+
+.message-wrap {
+  grid-area: message;
+  @extend %section-padding;
+}
+
+.settings-wrap {
+  grid-area: settings;
+  @extend %section-padding;
+}

@@ -1,0 +1,19 @@
+
+// NAVIGATION STYLES
+
+nav {
+  background-color: $primary-color;
+  width: 70px;
+  @include flex($dir: column)
+}
+
+.nav-content {
+  @include flex($dir: column);
+  text-align: center;
+  margin-top: 15px;
+}
+
+.icons {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
