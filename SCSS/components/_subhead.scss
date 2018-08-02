@@ -37,6 +37,20 @@
   @extend %focus-outline;
 }
 
-.alert-spacer {
-  display: none;
+.alert {
+  @include flex($just: space-between);
+  @include inset-block(80%);
+  @extend %rounded;
+  background: $primary-light;
+  height: $input-height;
+  padding-top: 15px;
+  color: $white;
+  span {
+    padding-left: $pad-left;
+  }
+  svg {
+    height: 15px;
+    width: 15px;
+    margin-right: $pad-left;
+  }
 }

@@ -2,17 +2,15 @@
 // GRID LAYOUT
 
 
-
-
-
 .main-wrapper {
   @include mediaQ('full') {
   display: grid;
   grid-template-columns: 70px 1fr;
-  grid-template-rows: 70px 70px auto;
+  grid-template-rows: 70px 70px 70px auto;
   grid-template-areas:
       'header header'
       'nav subhead'
+      'nav alert'
       'nav main';
   }
 }
@@ -56,6 +54,10 @@ nav {
 
 .subheader {
   grid-area: subhead;
+}
+
+.alert {
+  grid-area: alert;
 }
 
 .traffic-wrap {
