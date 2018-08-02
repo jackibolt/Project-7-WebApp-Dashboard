@@ -34,6 +34,7 @@
   @include mediaQ('full'){
     width: 40%;
   }
+  @extend %focus-outline;
 }
 
 .alert-spacer {

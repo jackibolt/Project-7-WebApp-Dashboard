@@ -21,3 +21,10 @@
     border:none
   }
 }
+
+%focus-outline {
+  &:focus {
+    box-shadow: 0 0 1.5pt 1.5pt $primary-light;
+    outline: none;
+  }
+}

@@ -23,6 +23,12 @@
   border: none;
 }
 
+button:focus, .time-zone select:focus, .message-wrap input:focus,
+.message-wrap textarea:focus, .search-wrap input:focus {
+  box-shadow: 0 0 1.5pt 1.5pt #8fd7ef;
+  outline: none;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -451,19 +457,39 @@ header {
 
 .header-content {
   width: 95%;
-  padding-top: 25px;
   margin: auto;
   display: flex;
   justify-content: space-between;
 }
 
+.app-name {
+  padding-top: 25px;
+}
+
 .right-info {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+.right-info > * {
+  padding-right: 20px;
+}
+
+.notif {
+  padding-top: 20px;
 }
 
 .profile {
   display: flex;
+  border-left: 1px solid black;
+  margin-top: 12px;
+  padding-left: 20px;
+}
+.profile-name {
+  padding-top: 13px;
+}
+.profile img {
+  margin-right: 20px;
+  margin-top: 3px;
 }
 
 nav {
@@ -660,6 +686,7 @@ img {
   padding-left: 15px;
   height: 45px;
   width: 100%;
+  border: #d9d9d9 1px solid;
 }
 
 .settings-buttons {

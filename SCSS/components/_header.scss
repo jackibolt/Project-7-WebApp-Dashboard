@@ -9,15 +9,35 @@ header {
 
 .header-content {
   width: 95%;
-  padding-top: 25px;
   margin: auto;
   @include flex($just: space-between);
 }
 
+.app-name{
+  padding-top: 25px;
+}
+
 .right-info {
-  @include flex($just: space-around);
+  @include flex($just: space-between);
+  > * {
+    padding-right: 20px;
+  }
+}
+
+.notif {
+  padding-top: 20px;
 }
 
 .profile {
-display: flex;
+  @include flex();
+  border-left: 1px solid black;
+  margin-top: 12px;
+  padding-left: 20px;
+  &-name {
+    padding-top: 13px;
+  }
+  img {
+    margin-right: 20px;
+    margin-top: 3px;
+  }
 }

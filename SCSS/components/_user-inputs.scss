@@ -16,6 +16,7 @@
   input,
   textarea{
     @extend %rounded;
+    @extend %focus-outline;
     border: $div-border;
     background: $lightest-grey;
   }
@@ -57,6 +58,8 @@
     padding-left: $pad-left;
     height: $input-height;
     width: 100%;
+    @extend %focus-outline;
+    border: $div-border;
 
   }
 }
@@ -78,6 +81,7 @@ button {
   height: $input-height;
   border: $div-border;
   background: $primary-color;
+  @extend %focus-outline;
 }
 
 #cancel {
