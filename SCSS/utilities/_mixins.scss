@@ -18,3 +18,26 @@
   text-align: center;
   @include inset-block;
 }
+
+// Media Query
+@mixin mediaQ ($break) {
+  @if $break == 'full' {
+    @media (min-width: $brk-full) {
+      @content;
+    }
+  }
+  @if $break == 'max' {
+    @media (min-width: $brk-max) {
+      @content;
+    }
+  }
+}
+
+// Activity Box
+@mixin activity-box ($flexgrow: 1) {
+  flex-grow: $flexgrow;
+  @include flex($dir: column);
+  text-align: left;
+  padding-left: 15px;
+  padding-top: 4px;
+}

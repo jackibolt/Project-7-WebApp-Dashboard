@@ -10,7 +10,11 @@
   @include flex($dir: row, $just: space-between);
 }
 
-.traffic-wrap {
+.chart-options span {
+  padding-left: 25px;
+}
+
+.main-grid > * {
   padding-left: 25px;
   padding-right: 25px;
 }

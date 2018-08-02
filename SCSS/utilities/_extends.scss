@@ -8,3 +8,16 @@
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
+%title-padding {
+  padding-bottom: 30px;
+}
+
+%info-box {
+  padding-top: 15px;
+  border-bottom: $div-border;
+  height: 65px;
+  &:last-child {
+    border:none
+  }
+}

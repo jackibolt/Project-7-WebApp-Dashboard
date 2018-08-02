@@ -1,0 +1,44 @@
+
+//SOCIAL WIDGET STYLES
+
+.social-content {
+  @include inset-block(80%);
+  @include flex($dir: column);
+  @include mediaQ('max'){
+    @include flex($dir: row, $just: space-between);
+    @include inset-block(100%);
+  }
+}
+
+.twitter-div,
+.facebook-div,
+.google-div {
+  @extend %rounded;
+  margin: auto;
+  width: 100%;
+  height: 100px;
+  border: $div-border;
+  background-color: $lightest-grey;
+  margin: 15px auto 15px;
+  padding: 15px 15px;
+  @include flex();
+  @include mediaQ('full'){
+  margin: 10px 15px 10px;
+  }
+}
+
+.social-info {
+  padding-left: 15px;
+  @include flex($dir: column);
+}
+
+.social-text {
+  font-size: $base-font-size;
+  color: $primary-color;
+  font-weight: bold;
+}
+
+.social-num {
+  font-size: $xxl-font;
+  font-weight: 100;
+}

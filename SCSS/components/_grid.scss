@@ -1,38 +1,43 @@
 
 // GRID LAYOUT
 
+
+
+
+
 .main-wrapper {
+  @include mediaQ('full') {
   display: grid;
   grid-template-columns: 70px 1fr;
-  grid-template-rows: 70px auto;
+  grid-template-rows: 70px 70px auto;
   grid-template-areas:
       'header header'
+      'nav subhead'
       'nav main';
+  }
 }
 
 .main-grid {
+  @include mediaQ('full') {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 70px auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   grid-template-areas:
-      'subhead subhead'
       'traffic traffic'
       'daily mobile'
       'social social'
       'members recent'
       'message settings';
+  }
 }
 
 
 // Section Styles
 .section-title {
+  color: $grey;
   font-size: $large-font;
   text-transform: uppercase;
-}
-
-.main-grid > div {
-  // padding-left: 25px;
-  // padding-right: 25px;
+  @extend %title-padding;
 }
 
 

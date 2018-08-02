@@ -7,7 +7,7 @@ const myChart1 = new Chart(ctx1, {
     data: {
         labels: ['6 a.m.', '9 a.m.', '12 p.m.', '3 p.m.', '6 p.m.', '9 p.m.', '12 a.m.'],
         datasets: [{
-            label: '',
+            label: 'Traffic',
             data: [800, 1500, 2400, 2200, 3000, 1120, 400],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -30,8 +30,9 @@ const myChart1 = new Chart(ctx1, {
     },
 
     options: {
-      // lineTension: 0;
-      // pointRadius: 15;
+      legend: {
+            display: false
+        }
     }
 });
 
@@ -45,7 +46,7 @@ const myChart2 = new Chart(ctx2, {
     data: {
         labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
         datasets: [{
-            label: '',
+            label: 'Daily Traffic',
             data: [300, 1400, 1200, 1300, 1100, 900, 600],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -71,8 +72,9 @@ const myChart2 = new Chart(ctx2, {
     },
 
     options: {
-      // lineTension: 0;
-      // pointRadius: 15;
+      legend: {
+            display: false
+        }
     }
 });
 
@@ -85,7 +87,7 @@ const myChart3 = new Chart(ctx3, {
     data: {
         labels: ['Phones', 'Tablets', 'Desktops'],
         datasets: [{
-            label: '',
+            label: 'Mobile Users',
             data: [60, 20, 18],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -111,7 +113,8 @@ const myChart3 = new Chart(ctx3, {
     },
 
     options: {
-      // lineTension: 0;
-      // pointRadius: 15;
+      legend: {
+            display: false
+        }
     }
 });

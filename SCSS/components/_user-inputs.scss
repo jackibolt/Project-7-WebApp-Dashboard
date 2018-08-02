@@ -1,0 +1,85 @@
+
+// USER MESSAGE STYLES
+
+.message-wrap {
+  @include flex($dir: column);
+  input {
+    height: $input-height;
+  }
+  textarea {
+    padding-top: 15px;
+  }
+  textarea {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  input,
+  textarea{
+    @extend %rounded;
+    border: $div-border;
+    background: $lightest-grey;
+  }
+  input,
+  textarea {
+    padding-left: $pad-left;
+  }
+}
+
+
+
+// SETTINGS STYLES
+
+.settings-wrap {
+  border-left: $div-border;
+  @include flex($dir: column, $just: space-between);
+}
+
+.switch {
+  @include flex();
+}
+
+.switch-div {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  @include flex($just: space-between);
+  text-align: left;
+}
+
+.switches {
+  width: 58%;
+}
+
+.time-zone {
+  label {
+    display: none;
+  }
+  select {
+    padding-left: $pad-left;
+    height: $input-height;
+    width: 100%;
+
+  }
+}
+
+
+
+// BUTTON STYLES
+
+.settings-buttons {
+  margin-top: 30px;
+  @include flex($just: space-between);
+  button {
+      width: 48%;
+  }
+}
+
+button {
+  @extend %rounded;
+  height: $input-height;
+  border: $div-border;
+  background: $primary-color;
+}
+
+#cancel {
+  background: $medium-grey;
+}

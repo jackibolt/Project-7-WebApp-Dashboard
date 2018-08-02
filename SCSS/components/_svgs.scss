@@ -1,17 +1,47 @@
 
-.notif {
-  height: 30px;
-  width: 30px;
-}
-
-.bell,
-.dashboard,
-.members,
-.visits,
-.settings {
+// General icons
+path {
   fill: $white;
 }
 
 svg {
-   width: 30px;
+    width: 30px;
+}
+
+// Social icons
+
+.icon-surround {
+  width: 70px;
+  height: 70px;
+  background: $primary-color;
+  border-radius: 50%;
+  text-align: center;
+  svg {
+    width: 80%;
+    padding: 5px;
+    width: 70px;
+  }
+}
+
+.twitter-div .icon-surround {
+  padding-top: 5px;
+}
+
+.facebook-div .icon-surround {
+  padding-top: 2px;
+  padding-right: 6px;
+}
+
+.twitter {
+  width: 45px;
+}
+
+// Recent activity icons
+.recent-wrap {
+  svg {
+    width: 20px;
+  }
+  path {
+    fill: $primary-color;
+  }
 }

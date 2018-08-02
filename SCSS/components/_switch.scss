@@ -1,0 +1,49 @@
+
+// SWITCH STYLING
+
+
+.switch-div {
+  input {
+    display: none;
+
+    &:checked + .content{
+      background: $grey;
+      &::before {
+        transform: translateX(68px);
+      }
+      &::after {
+        content: 'OFF';
+      }
+    }
+  }
+  .content {
+    cursor: pointer;
+    width: 105px;
+    background: $primary-color;
+    height: 36px;
+    border-radius: 18px;
+    color: $white;
+    padding-top: 4px;
+    &::after {
+      content: 'ON';
+      display: inline-block;
+      color: $white;
+      padding-bottom: 6px;
+      vertical-align: super;
+    }
+    &::before {
+      content: '';
+      display: inline-block;
+      height:25px;
+      width: 25px;
+      border-radius: 50%;
+      background-color: $white;
+      margin: 1px 6px;
+      transition: .4s;
+    }
+  }
+}
+
+// .content {
+//   padding-top: 6px;
+// }

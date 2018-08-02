@@ -1,0 +1,30 @@
+
+// NEW MEMBERS
+
+.member {
+  @include flex($just: space-between);
+  @extend %info-box;
+  &-info {
+    @include activity-box(3);
+  }
+  .name {
+  }
+  .email {
+    color: $primary-color;
+    font-weight: 500;
+  }
+  .date {
+    padding-top: 10px;
+    font-size: $sm-font;
+  }
+}
+
+// RECENT Activity
+
+.activity {
+  @include flex($just: space-between);
+  @extend %info-box;
+  &-info {
+    @include activity-box(4);
+  }
+}

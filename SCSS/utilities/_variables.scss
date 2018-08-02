@@ -10,18 +10,31 @@ $medium-grey: #d9d9d9;
 
 
   //basic colors
-$grey: #666666;
+$grey: #a6a6a6;
 $white: #fff;
-
 
 
 // FONTS
 $main-font: 'Source Sans Pro', sans-serif;
 
   //font sizes
+$sm-font: .8rem;
 $base-font-size: 16px;
+$med-font: 1.25rem;
 $large-font: 1.3rem;
 $xl-font: 1.5rem;
+$xxl-font: 3rem;
 
 // BORDER
-$div-border: $medium-grey 1px solid
+$div-border: $medium-grey 1px solid;
+
+// INPUT PADDING
+$pad-left: 15px;
+
+//INPUT HEIGHT
+$input-height: 45px;
+
+// BREAKPOINTS
+
+$brk-full: 600px;
+$brk-max: 775px;

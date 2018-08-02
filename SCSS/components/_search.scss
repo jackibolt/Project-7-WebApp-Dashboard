@@ -4,6 +4,7 @@
 .subheader {
   @include flex( $just: space-between);
   margin-top: 0;
+  height: 70px;
 }
 
 .subheader span {
@@ -11,6 +12,7 @@
   padding-top: 15px;
   vertical-align: center;
   margin-right: 30px;
+  padding-left: 25px;
 }
 
 .search-wrap {
@@ -23,13 +25,15 @@
 }
 
 .search-wrap input {
-  margin-right: 20px;
-  width: 40%;
-  height: 45px;
   @extend %rounded;
-  border: none;
-  padding-left: 15px;
+  height: $input-height;
+  padding-left: $pad-left;
   border: $div-border;
+  margin-right: 20px;
+  width: 80%;
+  @include mediaQ('full'){
+    width: 40%;
+  }
 }
 
 .alert-spacer {

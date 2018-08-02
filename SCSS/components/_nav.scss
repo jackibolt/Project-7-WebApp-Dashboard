@@ -3,17 +3,25 @@
 
 nav {
   background-color: $primary-color;
-  width: 70px;
-  @include flex($dir: column)
+  @include mediaQ('full') {
+      width: 70px;
+  }
 }
 
 .nav-content {
-  @include flex($dir: column);
   text-align: center;
-  margin-top: 15px;
+  height: 70px;
+  padding-top: 8px;
+  @include flex($just: space-around);
+  @include mediaQ('full') {
+    height: auto;
+    margin-top: 15px;
+    @include flex($dir: column, $just: null);
+  }
 }
 
 .icons {
   margin-top: 15px;
   margin-bottom: 15px;
+
 }
