@@ -1,13 +1,12 @@
 
 // SEARCH BOX STYLES
 
-.subheader {
+.sub-wrap {
   @include flex( $just: space-between);
   margin-top: 0;
-  height: 70px;
 }
 
-.subheader span {
+.sub-wrap span {
   font-size: $xl-font;
   padding-top: 15px;
   vertical-align: center;
@@ -22,6 +21,7 @@
   border-left: $div-border;
   border-bottom: $div-border;
   background: $lightest-grey;
+  padding-bottom: 10px;
 }
 
 .search-wrap input {
@@ -42,12 +42,26 @@
   @include inset-block(80%);
   @extend %rounded;
   background: $primary-light;
+  font-size: $sm-font;
   height: $input-height;
-  padding-top: 15px;
+  margin-top: 15px;
   color: $white;
   span {
     padding-left: $pad-left;
   }
+  &-text {
+    padding-top: 10px;
+    padding-left: $pad-left;
+    @include mediaQ('full'){
+      padding-top: 15px;
+    }
+  }
+}
+
+.x-letter {
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left:15px;
   svg {
     height: 15px;
     width: 15px;

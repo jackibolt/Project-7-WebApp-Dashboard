@@ -21,7 +21,13 @@ nav {
 }
 
 .icons {
-  margin-top: 15px;
-  margin-bottom: 15px;
-
+  padding-top: 15px;
+  padding-bottom: 15px;
+  cursor: pointer;
+  border-left: 3px solid $primary-color;
+  transition: .5s;
+  &:hover {
+    border-left: 3px solid $red;
+    border-radius: -3px;
+  }
 }

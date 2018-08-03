@@ -6,11 +6,10 @@
   @include mediaQ('full') {
   display: grid;
   grid-template-columns: 70px 1fr;
-  grid-template-rows: 70px 70px 70px auto;
+  grid-template-rows: 70px auto auto;
   grid-template-areas:
       'header header'
       'nav subhead'
-      'nav alert'
       'nav main';
   }
 }
@@ -26,6 +25,13 @@
       'social social'
       'members recent'
       'message settings';
+  }
+}
+
+.main-grid > * {
+  @include mediaQ('full'){
+  padding-left: 25px;
+  padding-right: 25px;
   }
 }
 
@@ -60,48 +66,49 @@ nav {
   grid-area: alert;
 }
 
-.traffic-wrap {
+#traffic-wrap {
   grid-area: traffic;
   @extend %section-padding;
   border-bottom: $div-border;
 }
 
-.daily-wrap {
+#daily-wrap {
   grid-area: daily;
   @extend %section-padding;
 }
 
-.mobile-wrap {
+#mobile-wrap {
   grid-area: mobile;
   @extend %section-padding;
+  border-left: $div-border;
 }
 
-.social-wrap {
+#social-wrap {
   grid-area: social;
   @extend %section-padding;
   border-top: $div-border;
   border-bottom: $div-border;
 }
 
-.members-wrap {
+#members-wrap {
   grid-area: members;
   @extend %section-padding;
   border-bottom: $div-border;
 }
 
-.recent-wrap {
+#recent-wrap {
   grid-area: recent;
   @extend %section-padding;
   border-bottom: $div-border;
   border-left: $div-border;
 }
 
-.message-wrap {
+#message-wrap {
   grid-area: message;
   @extend %section-padding;
 }
 
-.settings-wrap {
+#settings-wrap {
   grid-area: settings;
   @extend %section-padding;
 }

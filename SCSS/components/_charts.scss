@@ -1,7 +1,7 @@
 
 // CHART STYLES
 
-.top-row {
+#top-row {
   @include flex($dir: row, $just: space-between);
   margin-right: 20px;
 }
@@ -10,11 +10,14 @@
   @include flex($dir: row, $just: space-between);
 }
 
-.chart-options span {
-  padding-left: 25px;
+.chart-options a {
+  padding: 6px 10px;
+  cursor: pointer;
 }
 
-.main-grid > * {
-  padding-left: 25px;
-  padding-right: 25px;
+.highlight {
+  background: $primary-light;
+  height: 30px;
+  color: white;
+  border-radius: 12px;
 }

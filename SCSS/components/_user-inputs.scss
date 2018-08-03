@@ -1,7 +1,7 @@
 
 // USER MESSAGE STYLES
 
-.message-wrap {
+#message-wrap {
   @include flex($dir: column);
   input {
     height: $input-height;
@@ -30,7 +30,7 @@
 
 // SETTINGS STYLES
 
-.settings-wrap {
+#settings-wrap {
   border-left: $div-border;
   @include flex($dir: column, $just: space-between);
 }
