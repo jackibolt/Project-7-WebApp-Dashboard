@@ -18,7 +18,7 @@ const addAlert = () => {
     alertText.innerHTML = "<span><strong>Alert</strong></span><span>You have a new notification on your account.</span>"
     alertText.className = "alert-text";
   const alertX = document.createElement('div');
-    alertX.innerHTML = "<a><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22.88 22.88' width='512' height='512'><path d='M.324 1.909a1.14 1.14 0 0 1 0-1.587 1.14 1.14 0 0 1 1.587 0l9.523 9.539L20.973.322a1.12 1.12 0 0 1 1.571 0 1.112 1.112 0 0 1 0 1.587l-9.523 9.524 9.523 9.539a1.112 1.112 0 0 1 0 1.587 1.12 1.12 0 0 1-1.571 0l-9.539-9.539-9.523 9.539a1.14 1.14 0 0 1-1.587 0c-.429-.444-.429-1.159 0-1.587l9.523-9.539L.324 1.909z' fill='#FFF'/></svg></a>"
+    alertX.innerHTML = "<a><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22.88 22.88'><path d='M.324 1.909a1.14 1.14 0 0 1 0-1.587 1.14 1.14 0 0 1 1.587 0l9.523 9.539L20.973.322a1.12 1.12 0 0 1 1.571 0 1.112 1.112 0 0 1 0 1.587l-9.523 9.524 9.523 9.539a1.112 1.112 0 0 1 0 1.587 1.12 1.12 0 0 1-1.571 0l-9.539-9.539-9.523 9.539a1.14 1.14 0 0 1-1.587 0c-.429-.444-.429-1.159 0-1.587l9.523-9.539L.324 1.909z' fill='#FFF'/></svg></a>"
     alertX.className = "x-letter";
   subhead.append(alertDiv);
   alertDiv.append(alertText);
@@ -65,7 +65,7 @@ const lineChart = document.getElementById("lineGraph").getContext('2d');
 
   // template function to put in graph data
 const showChart = (labels, data) => {
-  const makeChart = new Chart(lineChart, {
+  new Chart(lineChart, {
       type: 'line',
       data: {
           labels: labels,

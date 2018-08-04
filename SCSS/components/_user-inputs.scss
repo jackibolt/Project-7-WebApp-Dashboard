@@ -47,7 +47,10 @@
 }
 
 .switches {
-  width: 58%;
+  width: 100%;
+  @include mediaQ('max'){
+    width: 58%;
+  }
 }
 
 .time-zone {

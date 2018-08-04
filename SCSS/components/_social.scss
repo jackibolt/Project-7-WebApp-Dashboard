@@ -41,4 +41,7 @@
 .social-num {
   font-size: $xxl-font;
   font-weight: 100;
+  @include mediaQ('max') {
+    font-size: $xl-font;
+  }
 }

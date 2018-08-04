@@ -372,7 +372,7 @@ template {
   display: none;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 769px) {
   .main-wrapper {
     display: grid;
     grid-template-columns: 70px 1fr;
@@ -381,7 +381,7 @@ template {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 769px) {
   .main-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -394,7 +394,7 @@ template {
   padding-left: 10px;
   padding-right: 10px;
 }
-@media (min-width: 600px) {
+@media (min-width: 769px) {
   .main-grid > * {
     padding-left: 25px;
     padding-right: 25px;
@@ -528,7 +528,7 @@ header {
 nav {
   background-color: #4cbfe6;
 }
-@media (min-width: 600px) {
+@media (min-width: 769px) {
   nav {
     width: 70px;
   }
@@ -541,7 +541,7 @@ nav {
   display: flex;
   justify-content: space-around;
 }
-@media (min-width: 600px) {
+@media (min-width: 769px) {
   .nav-content {
     height: auto;
     margin-top: 15px;
@@ -559,14 +559,13 @@ nav {
 }
 .icons:hover {
   border-left: 3px solid #ff0000;
-  border-radius: -3px;
 }
 
 #top-row {
   margin-right: 20px;
   margin-bottom: 20px;
 }
-@media (min-width: 600px) {
+@media (min-width: 769px) {
   #top-row {
     display: flex;
     flex-direction: row;
@@ -585,7 +584,7 @@ nav {
   padding: 8px 6px;
   font-size: 0.8rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 769px) {
   .chart-options a {
     padding: 6px 10px;
     font-size: 16px;
@@ -608,8 +607,8 @@ svg {
 }
 
 .icon-surround {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background: #4cbfe6;
   border-radius: 50%;
   text-align: center;
@@ -617,7 +616,7 @@ svg {
 .icon-surround svg {
   width: 80%;
   padding: 5px;
-  width: 70px;
+  width: 50px;
 }
 
 .twitter-div .icon-surround {
@@ -677,7 +676,7 @@ img {
   margin-right: 20px;
   width: 80%;
 }
-@media (min-width: 600px) {
+@media (min-width: 769px) {
   .search-wrap input {
     width: 40%;
   }
@@ -701,7 +700,7 @@ img {
   padding-top: 10px;
   padding-left: 15px;
 }
-@media (min-width: 600px) {
+@media (min-width: 769px) {
   .alert-text {
     padding-top: 15px;
   }
@@ -763,7 +762,12 @@ img {
 }
 
 .switches {
-  width: 58%;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .switches {
+    width: 58%;
+  }
 }
 
 .time-zone label {
@@ -821,7 +825,7 @@ button {
   width: 225px;
   border-radius: 10px;
 }
-@media (min-width: 600px) {
+@media (min-width: 769px) {
   .alert-box {
     padding: 45px;
     width: 425px;
@@ -834,7 +838,7 @@ button {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 775px) {
+@media (min-width: 1024px) {
   .social-content {
     display: flex;
     flex-direction: row;
@@ -856,7 +860,7 @@ button {
   padding: 15px 15px;
   display: flex;
 }
-@media (min-width: 600px) {
+@media (min-width: 769px) {
   .twitter-div,
 .facebook-div,
 .google-div {
@@ -879,6 +883,11 @@ button {
 .social-num {
   font-size: 3rem;
   font-weight: 100;
+}
+@media (min-width: 1024px) {
+  .social-num {
+    font-size: 1.5rem;
+  }
 }
 
 .member {
