@@ -29,6 +29,8 @@
 }
 
 .main-grid > * {
+  padding-left: 10px;
+  padding-right: 10px;
   @include mediaQ('full'){
   padding-left: 25px;
   padding-right: 25px;

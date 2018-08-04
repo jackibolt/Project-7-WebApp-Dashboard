@@ -28,6 +28,7 @@ header {
   padding-top: 20px;
   position: relative;
   transition: .5s;
+  cursor: pointer;
   &::before {
     position: absolute;
     right: 16px;

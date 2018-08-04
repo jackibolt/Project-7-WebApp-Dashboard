@@ -2,8 +2,11 @@
 // CHART STYLES
 
 #top-row {
-  @include flex($dir: row, $just: space-between);
   margin-right: 20px;
+  margin-bottom: 20px;
+  @include mediaQ('full'){
+    @include flex($dir: row, $just: space-between);
+  }
 }
 
 .chart-options {
@@ -11,8 +14,13 @@
 }
 
 .chart-options a {
-  padding: 6px 10px;
   cursor: pointer;
+  padding: 8px 6px;
+  font-size: $sm-font;
+  @include mediaQ('full') {
+    padding: 6px 10px;
+    font-size: $base-font-size;
+  }
 }
 
 .highlight {

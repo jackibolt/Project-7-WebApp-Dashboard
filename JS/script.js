@@ -30,13 +30,19 @@ const removeAlert = () => {
   subhead.removeChild(alertBox);
 }
 
-addAlert();
-addAlert();
+let noteTote = 0
 
-  // Hide alert box if notification bell is clicked
 notif.addEventListener('click', () => {
-  removeAlert();
+  i = noteTote;
+  if (noteTote < 2) {
+    addAlert();
+    noteTote += 1;
+    console.log(noteTote);
+  } else {
+    removeAlert();
+  }
 });
+
 
   // Hide alert box if X is clicked
 subhead.addEventListener('click', (e) => {
@@ -219,7 +225,34 @@ const myChart3 = new Chart(ctx3, {
     }
 });
 
-
 ///////////////////////////////
-      ///// MEMBERS /////
+        /// MESSAGE ///
 //////////////////////////////
+
+const sendBtn = document.querySelector('.send');
+const userInput = document.querySelector('#message-wrap input');
+const msgInput = document.querySelector('#message-wrap textarea');
+const idDiv = document.querySelector('#overlay');
+
+const createBox = (content) => {
+  idDiv.style.display = 'flex';
+  const alertBox = document.createElement('span');
+  alertBox.classList.add('alert-box');
+  alertBox.innerHTML = content ;
+  idDiv.appendChild(alertBox);
+};
+
+sendBtn.addEventListener('click', () => {
+  if (userInput.value.length === 0 || msgInput.value.length === 0) {
+    createBox("<strong>Error.</strong>  Your message did not send because you've left a field blank.");
+    console.log('nope')
+  } else {
+    createBox("Message sent.");
+  }
+});
+
+idDiv.addEventListener('click', () => {
+  idDiv.style.display = "none";
+  alertKid = document.querySelector('.alert-box');
+  idDiv.removeChild(alertKid);
+});

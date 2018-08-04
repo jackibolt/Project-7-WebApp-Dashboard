@@ -37,6 +37,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
   color: #a6a6a6;
+  margin: auto;
 }
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -389,6 +390,10 @@ template {
   }
 }
 
+.main-grid > * {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 @media (min-width: 600px) {
   .main-grid > * {
     padding-left: 25px;
@@ -490,6 +495,7 @@ header {
   padding-top: 20px;
   position: relative;
   transition: 0.5s;
+  cursor: pointer;
 }
 .notif::before {
   position: absolute;
@@ -557,10 +563,15 @@ nav {
 }
 
 #top-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   margin-right: 20px;
+  margin-bottom: 20px;
+}
+@media (min-width: 600px) {
+  #top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .chart-options {
@@ -570,8 +581,15 @@ nav {
 }
 
 .chart-options a {
-  padding: 6px 10px;
   cursor: pointer;
+  padding: 8px 6px;
+  font-size: 0.8rem;
+}
+@media (min-width: 600px) {
+  .chart-options a {
+    padding: 6px 10px;
+    font-size: 16px;
+  }
 }
 
 .highlight {
@@ -703,6 +721,7 @@ img {
 #message-wrap {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 #message-wrap input {
   height: 45px;
@@ -755,6 +774,7 @@ img {
   height: 45px;
   width: 100%;
   border: #d9d9d9 1px solid;
+  color: #a6a6a6;
 }
 
 .settings-buttons {
@@ -770,10 +790,42 @@ button {
   height: 45px;
   border: #d9d9d9 1px solid;
   background: #4cbfe6;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
 }
 
 #cancel {
   background: #d9d9d9;
+}
+
+#overlay {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  background-color: transparent;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+}
+
+.alert-box {
+  background-color: #f2f2f2;
+  color: #ff0000;
+  border: #d9d9d9 1px solid;
+  margin: auto;
+  padding: 25px;
+  width: 225px;
+  border-radius: 10px;
+}
+@media (min-width: 600px) {
+  .alert-box {
+    padding: 45px;
+    width: 425px;
+  }
 }
 
 .social-content {

@@ -2,7 +2,7 @@
 // USER MESSAGE STYLES
 
 #message-wrap {
-  @include flex($dir: column);
+  @include flex($dir: column, $just: space-between);
   input {
     height: $input-height;
   }
@@ -60,7 +60,7 @@
     width: 100%;
     @extend %focus-outline;
     border: $div-border;
-
+    color: $grey;
   }
 }
 
@@ -82,8 +82,39 @@ button {
   border: $div-border;
   background: $primary-color;
   @extend %focus-outline;
+  text-transform: uppercase;
+  color: $white;
+  cursor: pointer;
 }
 
 #cancel {
   background: $medium-grey;
+}
+
+// OVERLAY
+#overlay {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  background-color: transparent;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+}
+
+.alert-box {
+  background-color: $lightest-grey;
+  color: $red;
+  border: $div-border;
+  margin: auto;
+  padding: 25px;
+  width: 225px;
+  border-radius: 10px;
+  @include mediaQ('full') {
+    padding: 45px;
+    width: 425px;
+  }
 }

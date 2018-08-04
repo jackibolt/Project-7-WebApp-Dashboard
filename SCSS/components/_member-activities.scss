@@ -1,6 +1,7 @@
 
 // NEW MEMBERS
 
+
 .member {
   @include flex($just: space-between);
   @extend %info-box;
@@ -19,7 +20,7 @@
   }
 }
 
-// RECENT Activity
+// RECENT ACTIVITY
 
 .activity {
   @include flex($just: space-between);
