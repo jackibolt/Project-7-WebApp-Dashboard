@@ -14,12 +14,12 @@
   padding-bottom: 30px;
 }
 
-.activity, .member {
+.member {
   padding-top: 15px;
   border-bottom: #d9d9d9 1px solid;
   height: 65px;
 }
-.activity:last-child, .member:last-child {
+.member:last-child {
   border: none;
 }
 
@@ -450,6 +450,9 @@ nav {
 #members-wrap {
   grid-area: members;
   border-bottom: #d9d9d9 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #recent-wrap {
@@ -907,6 +910,13 @@ button {
 .member .email {
   color: #4cbfe6;
   font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 18px;
+}
+@media (min-width: 1024px) {
+  .member .email {
+    font-size: 16px;
+  }
 }
 .member .date {
   padding-top: 10px;
@@ -916,6 +926,10 @@ button {
 .activity {
   display: flex;
   justify-content: space-between;
+  border-bottom: #d9d9d9 1px solid;
+}
+.activity:last-child {
+  border: none;
 }
 .activity-info {
   flex-grow: 4;
@@ -926,10 +940,27 @@ button {
   padding-top: 4px;
 }
 
+.time-stamp {
+  font-size: 0.8rem;
+}
+@media (min-width: 1024px) {
+  .time-stamp {
+    font-size: 16px;
+  }
+}
+
 .activity,
 .member {
-  height: auto;
+  height: 85px;
   padding-bottom: 15px;
+  padding-top: 15px;
+}
+.activity-profiles,
+.member-profiles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 2;
 }
 
 .switch-div input {

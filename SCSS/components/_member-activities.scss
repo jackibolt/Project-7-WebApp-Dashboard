@@ -13,6 +13,11 @@
   .email {
     color: $primary-color;
     font-weight: 500;
+    font-size: $sm-font;
+    line-height: 18px;
+    @include mediaQ('max'){
+      font-size: $base-font-size;
+    }
   }
   .date {
     padding-top: 10px;
@@ -24,14 +29,29 @@
 
 .activity {
   @include flex($just: space-between);
-  @extend %info-box;
+  border-bottom: $div-border;
+  &:last-child {
+    border:none
+  }
   &-info {
     @include activity-box(4);
   }
 }
 
+.time-stamp {
+  font-size: $sm-font;
+  @include mediaQ('max') {
+    font-size: $base-font-size;
+  }
+}
+
 .activity,
 .member {
-  height: auto;
+  height: 85px;
   padding-bottom: 15px;
+  padding-top: 15px;
+  &-profiles {
+    @include flex($dir: column, $just: space-between);
+    flex-grow: 2;
+  }
 }

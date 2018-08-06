@@ -96,6 +96,7 @@ nav {
   grid-area: members;
   @extend %section-padding;
   border-bottom: $div-border;
+  @include flex ($dir: column, $just: space-between)
 }
 
 #recent-wrap {
