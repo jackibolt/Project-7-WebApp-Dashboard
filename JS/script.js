@@ -33,14 +33,21 @@ const removeAlert = () => {
 let noteTote = 0
 
 notif.addEventListener('click', () => {
-  i = noteTote;
+  // i = noteTote;
   if (noteTote < 2) {
     addAlert();
     noteTote += 1;
     console.log(noteTote);
-  } else {
+  } else if (noteTote === 2){
+    noteTote +=1;
     removeAlert();
+    console.log(noteTote);
+  } else if (noteTote === 3) {
+    removeAlert();
+    noteTote = 0;
+    console.log(noteTote);
   }
+
 });
 
 

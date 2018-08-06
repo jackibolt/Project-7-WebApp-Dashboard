@@ -29,3 +29,9 @@
     @include activity-box(4);
   }
 }
+
+.activity,
+.member {
+  height: auto;
+  padding-bottom: 15px;
+}

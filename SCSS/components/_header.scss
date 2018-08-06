@@ -27,7 +27,6 @@ header {
 .notif {
   padding-top: 20px;
   position: relative;
-  transition: .5s;
   cursor: pointer;
   &::before {
     position: absolute;
@@ -38,6 +37,9 @@ header {
     width: 10px;
     border-radius: 50%;
     background: $red;
+  }
+  path {
+    transition: .5s;
   }
   &:hover {
     path {
